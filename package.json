@@ -1,0 +1,23 @@
+{
+  "name": "typescript-toy-motion",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/deokgoo/typescript-toy-motion",
+  "author": "deokgoo <kkddgg1001@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "lite-server",
+    "build": "npx babel ./src -d ./dist --extensions '.ts'",
+    "build:watch": "npx babel ./src -d ./dist -w --extensions '.ts'",
+    "check-type": "tsc"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-transform-typescript": "^7.12.13",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-typescript": "^7.12.13",
+    "const": "^1.0.0",
+    "lite-server": "^2.6.1"
+  }
+}
