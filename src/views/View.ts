@@ -1,5 +1,8 @@
+
 abstract class View {
-  constructor(private el: HTMLElement) {};
+  constructor(public el: HTMLElement) {
+    this.render();
+  };
   abstract render(): void;
   on(evt: keyof HTMLElementEventMap, callback: EventListenerOrEventListenerObject) {
     this.el.addEventListener(evt, callback);

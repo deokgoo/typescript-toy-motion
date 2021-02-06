@@ -1,4 +1,6 @@
 import MainController from './controller/MainController';
+import './style/common.scss';
+import './style/style.scss';
 
 const createElements = (names: string[]): HTMLDivElement[] => {
   return names.map(x => {

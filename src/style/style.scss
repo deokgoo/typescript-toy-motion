@@ -1,0 +1,16 @@
+@import 'color', 'size';
+
+#app {
+  padding: $motion-s5;
+  height: 100vh;
+  min-height: 667px;
+  width: 100vw;
+  min-width: 576px;
+  background-color: $motion-color-white;
+}
+#header {
+  .buttons {
+    display: flex;
+    .button {margin-right: $motion-s2;}
+  }
+}
