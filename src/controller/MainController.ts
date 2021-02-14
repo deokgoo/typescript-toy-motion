@@ -1,15 +1,21 @@
-import Header from '../views/Header';
+import Thumbnail from '../components/Thumnail';
+import Contents from '../components/Contents';
+
 
 class MainController {
-  headerComponent: Header | undefined;
+  thumbnailComponent: Thumbnail | undefined;
+  contentsComponent: Contents | undefined;
   static create() { return new MainController(); }
   init() {
-    const headerEl: HTMLElement | null = document.querySelector('#header');
+    const thumbnailEl: HTMLElement | null = document.querySelector('#thumbnail');
+    const contentsEl: HTMLElement | null = document.querySelector('#contents');
 
-    if(!headerEl) {
+    if(!thumbnailEl || !contentsEl) {
       throw new Error('not found element');
     }
-    this.headerComponent = Header.create(headerEl);
+
+    Thumbnail.create(thumbnailEl);
+    Contents.create(contentsEl);
   }
 }
 

@@ -12,7 +12,7 @@ const createElements = (names: string[]): HTMLDivElement[] => {
 
 window.addEventListener('DOMContentLoaded', () => {
   const app = document.querySelector('#app');
-  const baseEls: HTMLDivElement[] = createElements(['header']);
+  const baseEls: HTMLDivElement[] = createElements(['thumbnail', 'contents']);
   
   baseEls.forEach((x: HTMLDivElement) => {
     app?.appendChild(x);

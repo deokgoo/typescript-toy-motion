@@ -1,5 +1,5 @@
 @import 'color', 'size';
-
+$page-left: 50px;
 #app {
   padding: $motion-s5;
   height: 100vh;
@@ -7,10 +7,79 @@
   width: 100vw;
   min-width: 576px;
   background-color: $motion-color-white;
+  input {
+    border: none;
+    outline: none;
+    width: calc(100% - $page-left);
+    background-color: $motion-color-white;
+  }
+  ::placeholder {
+    color: $motion-color-light-gray;
+    opacity: 1;
+  }
 }
-#header {
+#thumbnail {
+  margin-left: $page-left;
   .buttons {
     display: flex;
-    .button {margin-right: $motion-s2;}
+    opacity: 0;
+    .button {
+      margin-right: $motion-s2;
+      padding: 5px;
+      color: $motion-color-gray;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      .button__title {margin-left: 0.1rem;}
+    }
+    .button:hover {background-color: $motion-color-light-gray;}
+  }
+  .title {
+    margin-top: $motion-s1;
+    .title__input {
+      height: 4rem;
+      width: 100%;
+      font-size: 3rem;
+      font-weight: bold;
+    }
+  }
+}
+
+#thumbnail:hover 
+.buttons {opacity: 1;}
+
+// contents
+#contents {
+  margin-top: $motion-s2;
+  .items {
+    display: flex;
+    flex-direction: column;
+    .item {
+      display: flex;
+      font-size: 2rem;
+      .buttons {
+        display: flex;
+        justify-content: center;
+        width: $page-left;
+        font-size: 1.5rem;
+        opacity: 0;
+        button {
+          color: $motion-color-light-gray;
+          border: none;
+          background-color: transparent;
+          outline: none;
+          cursor: pointer;
+        }
+      }
+      input {
+        display: flex;
+        width: 100%;
+        font-size: 1rem;
+      }
+    }
+    .item:hover>.buttons
+    {
+      opacity: 1;
+    }
   }
 }
